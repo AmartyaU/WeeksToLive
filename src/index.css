@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --grid-template-columns-52: repeat(52, minmax(0, 1fr));
+
+  @keyframes grow {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: .75; }
+  }
+  /* In v4, the variable name must match the utility name */
+  --animate-grow: grow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
+}
+
+@utility animate-heartbeat {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); } /* Lub */
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); } /* Dub */
+  70% { transform: scale(1); }
+}
+
+.group:hover .animate-heartbeat {
+  animation-duration: 0.8s;
+}
