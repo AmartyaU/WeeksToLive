@@ -26,7 +26,7 @@ const LifeGrid = ({ birthDate, lifespanYears }) => {
     <div className="space-y-1">
       {yearRows.map((weeks, year) => (
         <div key={year} className="flex items-center gap-2">
-          <div className="w-6 shrink-0 text-right text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+          <div className="w-6 shrink-0 text-right text-[clamp(2px,0.6vw,12px)] font-bold uppercase tracking-widest text-zinc-400">
             {year % 5 === 0 ? year : ''}
           </div>
           <div className="grid grid-cols-52 gap-1 flex-1">
