@@ -31,15 +31,15 @@ const LifeGrid = ({ birthDate, lifespanYears }) => {
           </div>
           <div className="grid grid-cols-52 gap-1 flex-1">
             {weeks.map(i => {
-              let className = 'aspect-square rounded-[1px] ';
+              let className = 'relative aspect-square rounded-[1px] transition-all duration-200 cursor-pointer ';
               if (i < weeksLived) {
-                className += 'bg-slate-200';
-              } else if (i === weeksLived) {
-                className +=
-                  'bg-rose-400 ring-2 ring-rose-200 shadow-lg animate-pulse';
-              } else {
-                className +=
-                  'bg-sky-200 transition-all duration-200 hover:bg-sky-300 hover:scale-150 hover:z-10 hover:shadow-sm cursor-pointer';
+                className += 'bg-slate-200 hover:bg-slate-400 hover:scale-125 hover:z-10 hover:shadow-sm';
+              }
+              else if (i === weeksLived) {
+                className += 'bg-rose-400 ring-2 ring-rose-200 shadow-lg animate-pulse hover:bg-rose-500 hover:scale-150 hover:z-20 hover:shadow-xl';
+              }
+              else {
+                className += 'bg-sky-200 hover:bg-sky-300 hover:scale-150 hover:z-10 hover:shadow-sm';
               }
               return <div key={i} className={className} />;
             })}

@@ -24,7 +24,7 @@ const HeartbeatCounter = ({ beatsRemaining }) => {
           {formattedBeats}
         </div>
         <div className="text-xs uppercase tracking-widest text-zinc-500 mt-2">
-          ESTIMATED REMAINING<br/>BIOLOGICAL CLOCK
+          ESTIMATED REMAINING<br/>BIOLOGICAL CLOCK (HEARTBEATS)
         </div>
       </div>
     </div>
