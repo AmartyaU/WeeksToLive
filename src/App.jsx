@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LifeGrid from './components/LifeGrid';
 import StatsDashboard from './components/StatsDashboard';
 import './index.css';
+import lifeInWeeksImg from './assets/life chart.png';
 
 const DEFAULT_BIRTH_DATE = '1990-01-01';
 
@@ -94,8 +95,37 @@ function App() {
               </p>
             </div>
             <LifeGrid birthDate={birthDate} />
-            <div className="my-4 border-t border-zinc-100" />
-            <button 
+            <div className="mt-20 mb-12 py-12 border-t border-zinc-100">
+              <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
+                <p className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-zinc-400 mb-8">
+                  Inspiration
+                </p>
+                  <div className="relative overflow-hidden rounded-2xl border border-zinc-200 transition-all duration-700">
+                    <img
+                      src={lifeInWeeksImg}
+                      alt="Wait But Why Life in Weeks"
+                      className="w-full"
+                    />
+                  </div>
+
+                  <div className="mt-6 space-y-2">
+                    <p className="text-zinc-500 text-sm px-4 leading-relaxed">
+                      Inspired by Tim Urban’s original 2014 visualization on
+                        <span className="italic underline">
+                          <a
+                            href="https://waitbutwhy.com/2014/05/life-weeks.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block"
+                          >
+                            Wait But Why.
+                          </a>
+                        </span>
+                    </p>
+                  </div>
+              </div>
+            </div>
+            <button
               onClick={() => setHasSubmitted(false)}
               className="mt-8 text-zinc-400 hover:text-zinc-600 text-[12px] uppercase tracking-widest font-bold"
             >
