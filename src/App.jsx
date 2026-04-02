@@ -81,7 +81,18 @@ function App() {
         {hasSubmitted && birthDate &&
           <div className="animate-zoom-out">
             <StatsDashboard birthDate={birthDate} />
-            <div className="my-8 border-t border-zinc-100" />
+            <div className="mt-10 mb-5 max-w-2xl ml-6 pl-2 border-l-2 border-zinc-200 py-2">
+              <p className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-400 mb-2">
+                The Perspective
+              </p>
+              <h2 className="text-lg text-zinc-800 leading-relaxed font-light">
+                Each square below represents one week of a 75-year life (a conservative global estimate).
+              </h2>
+              <p className="mt-4 text-zinc-500 text-sm leading-relaxed">
+                Seeing the total sum of your time makes the "Now" impossible to ignore.
+                You are exactly where you are. <span className="text-zinc-900 font-medium italic">Make the remaining squares count.</span>
+              </p>
+            </div>
             <LifeGrid birthDate={birthDate} />
             <div className="my-4 border-t border-zinc-100" />
             <button 
